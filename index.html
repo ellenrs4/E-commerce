@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cafeteria</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">Café <span>na estrada</span></h1>
+    <div class="cart-btn" onclick="toggleCart()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="products" class="products-grid"></section>
+  </main>
+
+  <!-- Carrinho -->
+  <aside id="cart" class="cart">
+    <h2>Seu Carrinho</h2>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+      <p>Subtotal: R$ <span id="subtotal">0,00</span></p>
+      <p>Frete: R$ <span id="shipping">19,90</span></p>
+      <h3>Total: R$ <span id="total">0,00</span></h3>
+      <button onclick="checkout()">Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <!-- Modal Produto -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-img" src="" alt="">
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+      <p class="modal-price">R$ <span id="modal-price"></span></p>
+      <button id="modal-add-btn">Adicionar ao Carrinho</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
